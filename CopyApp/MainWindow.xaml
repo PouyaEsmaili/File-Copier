@@ -1,0 +1,168 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CopyApp"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="CopyApp.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindoww" Height="354" Width="664.2" Closing="Window_Closing">
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="72"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="163*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lblSource" Content="Source :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,0"/>
+            <Label x:Name="lblDestination" Content="Destination : " HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtSource" HorizontalAlignment="Left" Height="23" Margin="102,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" IsReadOnly="True"/>
+            <Button x:Name="btnSource" Content="..." HorizontalAlignment="Left" Margin="590,13,0,0" VerticalAlignment="Top" Width="23" Height="23" Click="btnSource_Click"/>
+                <Grid x:Name="grdDestination" HorizontalAlignment="Left" Margin="88,0,0,0" VerticalAlignment="Top" Width="535" RenderTransformOrigin="0.5,0.5" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="413*"/>
+                        <ColumnDefinition Width="72*"/>
+                        <ColumnDefinition Width="40*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            <Button x:Name="btnAddDestination" Content="Add" HorizontalAlignment="Left" Margin="102,47,0,0" VerticalAlignment="Top" Width="75" Click="btnAddDestination_Click"/>
+            <RadioButton x:Name="rbtnWatching" Content="Watching" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" GroupName="CopyType" Checked="rbtnWatching_Checked"/>
+            <RadioButton x:Name="rbtnCopyNow" Content="Copy Now" HorizontalAlignment="Left" Margin="216,10,0,0" Grid.Row="2" VerticalAlignment="Top" GroupName="CopyType" Checked="rbtnCopyNow_Checked"/>
+            <RadioButton x:Name="rbtnScheduledCopy" Content="Scheduled Copy" HorizontalAlignment="Left" Margin="102,10,0,0" Grid.Row="2" VerticalAlignment="Top" GroupName="CopyType" Checked="rbtnScheduledCopy_Checked"/>
+            <Button x:Name="btnSet" Content="Set" HorizontalAlignment="Left" Margin="311,8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="btnSet_Click" IsEnabled="False"/>
+            <ComboBox x:Name="cmb" HorizontalAlignment="Left" Margin="10,15.8,0,0" Grid.Row="3" VerticalAlignment="Top" Width="120" IsEnabled="False">
+                <ComboBoxItem x:Name="cmbHourly" Content="Hourly" Selected="cmbHourly_Selected"/>
+                <ComboBoxItem x:Name="cmbDaily" Content="Daily" Selected="cmbDaily_Selected"/>
+                <ComboBoxItem x:Name="cmbWeekly" Content="Weekly" Selected="cmbWeekly_Selected"/>
+                <ComboBoxItem x:Name="cmbMonthly" Content="Monthly" Selected="cmbMonthly_Selected"/>
+            </ComboBox>
+
+            <Grid x:Name="grdHourly" Margin="154,11.8,0,0" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="100" Visibility="Hidden">
+                <Label x:Name="lblHourly" Content="At :" Margin="0,0,110.8,0"/>
+                <ComboBox x:Name="MinuteOfHour" Margin="35,3,0,0">
+                    <ComboBoxItem Content="0" IsSelected="True"/>
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="9"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="11"/>
+                    <ComboBoxItem Content="12"/>
+                    <ComboBoxItem Content="13"/>
+                    <ComboBoxItem Content="14"/>
+                    <ComboBoxItem Content="15"/>
+                    <ComboBoxItem Content="16"/>
+                    <ComboBoxItem Content="17"/>
+                    <ComboBoxItem Content="18"/>
+                    <ComboBoxItem Content="19"/>
+                    <ComboBoxItem Content="20"/>
+                    <ComboBoxItem Content="21"/>
+                    <ComboBoxItem Content="22"/>
+                    <ComboBoxItem Content="23"/>
+                    <ComboBoxItem Content="24"/>
+                    <ComboBoxItem Content="25"/>
+                    <ComboBoxItem Content="26"/>
+                    <ComboBoxItem Content="27"/>
+                    <ComboBoxItem Content="28"/>
+                    <ComboBoxItem Content="29"/>
+                    <ComboBoxItem Content="30"/>
+                    <ComboBoxItem Content="31"/>
+                    <ComboBoxItem Content="32"/>
+                    <ComboBoxItem Content="33"/>
+                    <ComboBoxItem Content="34"/>
+                    <ComboBoxItem Content="35"/>
+                    <ComboBoxItem Content="36"/>
+                    <ComboBoxItem Content="37"/>
+                    <ComboBoxItem Content="38"/>
+                    <ComboBoxItem Content="39"/>
+                    <ComboBoxItem Content="40"/>
+                    <ComboBoxItem Content="41"/>
+                    <ComboBoxItem Content="42"/>
+                    <ComboBoxItem Content="43"/>
+                    <ComboBoxItem Content="44"/>
+                    <ComboBoxItem Content="45"/>
+                    <ComboBoxItem Content="46"/>
+                    <ComboBoxItem Content="47"/>
+                    <ComboBoxItem Content="48"/>
+                    <ComboBoxItem Content="49"/>
+                    <ComboBoxItem Content="50"/>
+                    <ComboBoxItem Content="51"/>
+                    <ComboBoxItem Content="52"/>
+                    <ComboBoxItem Content="53"/>
+                    <ComboBoxItem Content="54"/>
+                    <ComboBoxItem Content="55"/>
+                    <ComboBoxItem Content="56"/>
+                    <ComboBoxItem Content="57"/>
+                    <ComboBoxItem Content="58"/>
+                    <ComboBoxItem Content="59"/>
+                </ComboBox>
+            </Grid>
+            <Grid x:Name="grdDaily" Margin="154,11.8,0,0" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="138" Visibility="Hidden">
+                <Label x:Name="lblDaily" Content="At :" Margin="0,0,110.8,0"/>
+                <xctk:TimePicker x:Name="tpDaily" HorizontalAlignment="Left" Height="20" Margin="35,3,0,0" VerticalAlignment="Top" Width="100" Value="2016-11-16" Grid.Row="2" TimeInterval="0:15:0"/>
+            </Grid>
+
+            <Grid x:Name="grdWeekly" Margin="154,11.8,0,0" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="319" Visibility="Hidden">
+                <Label x:Name="lblWeekly1" Content="Every :" Margin="0,0,273,0"/>
+                <ComboBox x:Name="DayOfWeekSelector" Margin="50,0,176,0" >
+                    <ComboBoxItem Content="Saturday" IsSelected="True"/>
+                    <ComboBoxItem Content="Sunday"/>
+                    <ComboBoxItem Content="Monday"/>
+                    <ComboBoxItem Content="Tuesday"/>
+                    <ComboBoxItem Content="Wednesday"/>
+                    <ComboBoxItem Content="Thursday"/>
+                    <ComboBoxItem Content="Friday"/>
+                </ComboBox>
+                <Label x:Name="lblWeekly2" Content="At :" Margin="150,0,140,0"/>
+                <xctk:TimePicker x:Name="tpWeekly" HorizontalAlignment="Left" Height="20" Margin="183,4,0,0" VerticalAlignment="Top" Width="100" Value="2016-11-16" TimeInterval="0:15:0"/>
+            </Grid>
+            <Grid x:Name="grdMonthly" Margin="154,11.8,0,0" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="319" Visibility="Hidden">
+                <Label x:Name="lblMonthly1" Content="Every :" Margin="0,0,273,0"/>
+                <ComboBox x:Name="DayOfMonthSelector" Margin="50,0,176,0" >
+                    <ComboBoxItem Content="1" IsSelected="True"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="9"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="11"/>
+                    <ComboBoxItem Content="12"/>
+                    <ComboBoxItem Content="13"/>
+                    <ComboBoxItem Content="14"/>
+                    <ComboBoxItem Content="15"/>
+                    <ComboBoxItem Content="16"/>
+                    <ComboBoxItem Content="17"/>
+                    <ComboBoxItem Content="18"/>
+                    <ComboBoxItem Content="19"/>
+                    <ComboBoxItem Content="20"/>
+                    <ComboBoxItem Content="21"/>
+                    <ComboBoxItem Content="22"/>
+                    <ComboBoxItem Content="23"/>
+                    <ComboBoxItem Content="24"/>
+                    <ComboBoxItem Content="25"/>
+                    <ComboBoxItem Content="26"/>
+                    <ComboBoxItem Content="27"/>
+                    <ComboBoxItem Content="28"/>
+                    <ComboBoxItem Content="29"/>
+                    <ComboBoxItem Content="30"/>
+                    <ComboBoxItem Content="31"/>
+                </ComboBox>
+                <Label x:Name="lblMonthly2" Content="At :" Margin="150,0,140,0"/>
+                <xctk:TimePicker x:Name="tpMonthly" HorizontalAlignment="Left" Height="20" Margin="183,4,0,0" VerticalAlignment="Top" Width="100" Value="2016-11-16" TimeInterval="0:15:0" CurrentDateTimePart="Hour12"/>
+            </Grid>
+            <Button x:Name="btnDeleteConfig" Content="Delete Config" HorizontalAlignment="Left" Margin="10,9.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="114" Click="btnDeleteConfig_Click" IsEnabled="False"/>
+        </Grid>
+    </ScrollViewer>
+</Window>
